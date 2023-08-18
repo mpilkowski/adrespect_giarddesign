@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <title>Giarddesign - adrespect</title>
+  </head>
+  <body>
+    <body>
+      <nav id="Navi" class="px-[89px]">
+        <div
+          id="wrapper"
+          class="py-[29px] flex flex-col xl:flex-row justify-between items-center gap-4"
+        >
+          <div class="">
+            <img src="src/assets/giarddesign.png" alt="giarddesignLogo" />
+          </div>
+          <div class="menu">
+            <ul class="flex flex-row justify-between gap-12">
+              <li
+                class="after:content-dropdownIco after:ml-[5px] after:align-middle font-inter text-sm text-center align-top"
+              >
+                Oferta
+              </li>
+              <li class="font-inter text-sm text-center align-top">O firmie</li>
+              <li class="font-inter text-sm text-center align-top">
+                Realizacje
+              </li>
+              <li class="font-inter text-sm text-center align-top">Kontakt</li>
+              <li>
+                <img
+                  src="src/assets/searchIco.png"
+                  alt="search"
+                  class="w-6 h-6"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- px-[89px] py-[144.5px] -->
+      <section id="Hero" class="flex flex-col xl:flex-row bg-customBeige">
+        <div
+          id="wrapper"
+          class="px-8 py-8 2xl:px-[89px] 2xl:py-[144.5px] basis-1/2"
+        >
+          <div class="flex flex-col gap-[72px]">
+            <div class="flex flex-col gap-11">
+              <h1
+                class="font-montserrat font-medium text-5xl xl:text-6xl leading-[70px]"
+              >
+                Nowoczesna aranżacja <br />
+                Twojego ogrodu
+              </h1>
+              <p class="font-inter text-[16px]">
+                Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                <br />estetyka realizacji. Oferujemy kompleksowy zakres usług
+                <br />
+                z indywidualnym podejściem do każdego projektu.
+              </p>
+            </div>
+            <div class="flex md:flex-col flex-row gap-9">
+              <button
+                class="rounded-full min-w-[208px] bg-customGreen px-6 pt-3 pb-[14px] text-customGrey"
+              >
+                <span class="text-[16px] font-inter"
+                  >Skontaktuj się z nami</span
+                >
+              </button>
+              <button
+                class="border-2 min-w-[260px] border-customGreen rounded-full px-6 pt-3 pb-[14px] text-customGreen"
+              >
+                <span
+                  class="after:content-arrowDown after:align-middle after:ml-2 text-[16px] font-inter"
+                  >Zobacz nasze realizacje</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="heroImg" class="relative basis-1/2">
+          <img class="min-w-min" src="src/assets/heroImg.png" alt="" />
+          <div class="absolute bottom-0 right-0">
+            <button>back</button><button>next</button>
+          </div>
+        </div>
+
+        <!-- <div id="heroImg" class="heroImg relative xl:w-1/2">      
+        <div class="heroImg"></div>
+        <div class="absolute bottom-0 right-0">
+          <button>back</button><button>next</button>
+        </div>
+      </div> -->
+      </section>
+
+      <section
+        id="Oferta"
+        class="bg-customGrey flex flex-col pt-[120px] pb-[160px]"
+      >
+        <div class="flex flex-col gap-4">
+          <h6 class="text-customGreen text-xs font-inter">oferta</h6>
+
+          <div class="flex flex-col gap-8">
+            <h1 class="font-montserrat font-medium text-6xl leading-[70px]">
+              Działamy <span class="italic">Kompleksowo</span>
+            </h1>
+            <p class="font-inter text-[16px]">
+              Oferujemy kompletną obsługę inwestycji terenów zielonych.
+              Projektujemy nowoczesne ogrody <br />przydomowe oraz
+              rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i
+              wcielimy <br />w życie, a na każdym etapie posłużymy radą i
+              wieloletnim doświadczeniem.
+            </p>
+          </div>
+        </div>
+        <div class="pb-[160px]">
+          <div
+            id="card"
+            class="w-[378px] h-[370px] flex flex-col justify-between rounded-[28px] px-10 py-12 bg-white gap-8"
+          >
+            <div>
+              <img
+                src="src/assets/card1.svg"
+                width="44"
+                height="44"
+                alt="projectsIcon"
+              />
+            </div>
+            <div class="flex flex-col gap-3">
+              <h2 class="font-montserrat text-[28px]">Projekty</h2>
+              <p class="max-w-[298px] text-inter text-sm">
+                Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+                wykorzystaniem istniejącej przestrzeni.
+              </p>
+            </div>
+            <div>
+              <a
+                class="after:content-arrowRight after:ml-[10px] text-customGreen underline"
+                >Dowiedz się więcej</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
+
+    <div id="app"></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

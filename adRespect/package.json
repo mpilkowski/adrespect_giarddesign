@@ -14,5 +14,8 @@
     "prefixer": "^0.0.3",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "masonry-layout": "^4.2.2"
   }
 }

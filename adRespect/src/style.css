@@ -5,3 +5,45 @@
 body {
   margin: 0;
 }
+/* Masonry gallery styles */
+.gridMsnr {
+  width: 100vw;
+}
+.gridMsnr-item {
+  margin-bottom: 41px;
+}
+.gridMsnr-w1 {
+  width: 451px;
+}
+.gridMsnr-w2 {
+  width: 452px;
+}
+
+.gridMsnr-h1 {
+  height: 338px;
+}
+.gridMsnr-h2 {
+  height: 452px;
+}
+.gridMsnr-h3 {
+  height: 601px;
+}
+/* animated offers styles */
+.hide {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.hide:nth-child(1) {
+  transition-delay: 150ms;
+}
+.hide:nth-child(2) {
+  transition-delay: 300ms;
+}
+.hide:nth-child(3) {
+  transition-delay: 450ms;
+}

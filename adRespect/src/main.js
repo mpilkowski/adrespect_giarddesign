@@ -34,8 +34,33 @@ document.querySelectorAll(".gridMsnr .gridMsnr-item img").forEach((img) => {
   img.onclick = () => {
     document.querySelector(".popup").style.display = "block";
     document.querySelector(".popup img").src = img.getAttribute("src");
+    document.getElementById("Navi").style.position = "unset";
   };
 });
 document.querySelector(".popup span").addEventListener("click", () => {
   document.querySelector(".popup").style.display = "none";
+  document.getElementById("Navi").style.position = "sticky";
+});
+
+// document.querySelector(".scrollLink").addEventListener("click", (e) => {
+//   let destination = document.querySelector(".scrollLink").getAttribute("href");
+//   let navElement = document.getElementById(
+//     destination.slice(1, destination.length).toString()
+//   );
+//   e.preventDefault();
+//   navElement &&
+//     navElement.scrollIntoView({ behavior: "smooth", block: "start" });
+// });
+
+document.querySelectorAll(".scrollLink").forEach((a) => {
+  a.onclick = (e) => {
+    let destination = a.getAttribute("href");
+    let navElement = document.getElementById(
+      destination.slice(1, destination.length).toString()
+    );
+    e.preventDefault();
+
+    navElement &&
+      navElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 });

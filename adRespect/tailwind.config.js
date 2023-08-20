@@ -10,7 +10,6 @@ export default {
       },
 
       backgroundColor: {
-        customBeigeOpacity: "#DCC1ABD0",
         customBeige: "#DCC1AB",
         customGrey: "#F5F0EC",
         customGreen: "#1B5B31",
@@ -25,6 +24,7 @@ export default {
         arrowRight: 'url("/src/assets/arrowRight.svg")',
         arrowRightGrey: 'url("/src/assets/arrowRightGrey.svg")',
         arrowDown: 'url("/src/assets/arrowDown.svg")',
+        arrowDownBlack: 'url("/src/assets/arrowDownBlack.svg")',
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

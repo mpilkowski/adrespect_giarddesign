@@ -25,6 +25,7 @@ export default {
         arrowRightGrey: 'url("/src/assets/arrowRightGrey.svg")',
         arrowDown: 'url("/src/assets/arrowDown.svg")',
         arrowDownBlack: 'url("/src/assets/arrowDownBlack.svg")',
+        searchIco: 'url("/src/assets/SearchIco.svg")',
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

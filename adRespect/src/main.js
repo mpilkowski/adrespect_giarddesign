@@ -42,25 +42,79 @@ document.querySelector(".popup span").addEventListener("click", () => {
   document.getElementById("Navi").style.position = "sticky";
 });
 
-// document.querySelector(".scrollLink").addEventListener("click", (e) => {
-//   let destination = document.querySelector(".scrollLink").getAttribute("href");
-//   let navElement = document.getElementById(
-//     destination.slice(1, destination.length).toString()
-//   );
-//   e.preventDefault();
-//   navElement &&
-//     navElement.scrollIntoView({ behavior: "smooth", block: "start" });
+// 4.smooth scroll effect
+
+// document.querySelectorAll(".scrollLink").forEach((a) => {
+//   a.onclick = (e) => {
+//     let destination = a.getAttribute("href");
+//     let navElement = document.getElementById(
+//       destination.slice(1, destination.length).toString()
+//     );
+//     e.preventDefault();
+
+//     navElement &&
+//       navElement.scrollIntoView({ behavior: "smooth", block: "center" });
+//   };
+// });
+// 5.dropDown menu "oferty"
+
+// document.querySelector(".dropDownBtn").addEventListener("click", () => {
+//   document.querySelector(".dropDownContent").classList.toggle("showDropDown");
+// });
+// document.documentElement.addEventListener("click", () => {
+//   if (
+//     document
+//       .querySelector(".dropDownContent")
+//       .classList.contains("showDropDown")
+//   ) {
+//     document.querySelector(".dropDownContent").style.display = "none";
+//   }
 // });
 
-document.querySelectorAll(".scrollLink").forEach((a) => {
-  a.onclick = (e) => {
-    let destination = a.getAttribute("href");
-    let navElement = document.getElementById(
-      destination.slice(1, destination.length).toString()
-    );
-    e.preventDefault();
+// window.onclick = () => {
+//   if (document.querySelector(".dropDownContent").style.display === "block") {
+//     document.querySelector(".dropDownContent").style.display = "none";
+//   }
+// };
 
-    navElement &&
-      navElement.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+const dropDownBtn = document.querySelector(".dropDownBtn");
+const dropDownContent = document.querySelector(".dropDownContent");
+const openDropDown = () => {
+  dropDownContent.classList.toggle("showDropDown");
+  console.log("boom");
+};
+
+dropDownBtn.addEventListener("click", openDropDown());
+document.documentElement.addEventListener("click", () => {
+  if (dropDownContent.classList.contains("showDropDown")) {
+    openDropDown();
+  }
 });
+// const dropdownBtn = document.getElementById("btn");
+// const dropdownMenu = document.getElementById("dropdown");
+// const toggleArrow = document.getElementById("arrow");
+
+// const toggleDropdown = function () {
+//   dropdownMenu.classList.toggle("show");
+//   toggleArrow.classList.toggle("arrow");
+// };
+
+// dropdownBtn.addEventListener("click", function (e) {
+//   // e.stopPropagation();
+//   toggleDropdown();
+// });
+
+// document.documentElement.addEventListener("click", function () {
+//   if (dropdownMenu.classList.contains("show")) {
+//     toggleDropdown();
+//   }
+// });
+
+// document.querySelector(".dropDownBtn").addEventListener("click", () => {
+//   document.querySelector(".dropDownContent").style.display = "block";
+// });
+// document.documentElement.addEventListener("click", () => {
+//   if (document.querySelector(".dropDownContent").style.display === "block") {
+//     document.querySelector(".dropDownContent").style.display = "none";
+//   }
+// });

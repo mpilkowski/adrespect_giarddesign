@@ -5,6 +5,10 @@
 body {
   margin: 0;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* Masonry gallery styles */
 .gridMsnr {
   width: 100vw;
@@ -88,21 +92,17 @@ body {
 }
 .dropDownContent {
   position: absolute;
-  top: 0px;
+  top: 50px;
+  right: 0px;
   background: #fff;
 
-  transform: translateY(0.5rem);
+  transform: translateY(-40%);
   visibility: hidden;
   opacity: 0;
+  transition: all 0.5s;
 }
-
 .showDropDown {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0rem);
-}
-
-.arrow {
-  transform: rotate(180deg);
-  transition: 0.2s ease;
+  transform: translateY(0%);
 }

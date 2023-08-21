@@ -20,15 +20,19 @@
         </div>
         <div class="menu">
           <ul class="flex flex-row justify-between gap-6 xl:gap-12">
-            <li
-              class="after:content-dropdownIco after:ml-[5px] after:align-middle font-inter text-sm text-center align-top"
-            >
+            <li class="font-inter text-sm text-center align-top">
               <div class="dropDown">
-                <button class="dropDownBtn">Oferta</button>
-                <ul class="dropDownContent">
-                  <li><a href="#Oferty">Projekty</a></li>
-                  <li><a href="#Oferty">Wizualizacje</a></li>
-                  <li><a href="#Oferty">Realizacje</a></li>
+                <button
+                  class="dropDownBtn after:content-dropdownIco after:ml-[5px] after:align-middle"
+                >
+                  Oferta
+                </button>
+                <ul class="dropDownContent flex flex-col gap-2 px-5 py-3">
+                  <li><a class="scrollLink" href="#Oferta">Projekty</a></li>
+                  <hr />
+                  <li><a class="scrollLink" href="#Oferta">Wizualizacje</a></li>
+                  <hr />
+                  <li><a class="scrollLink" href="#Oferta">Realizacje</a></li>
                 </ul>
               </div>
             </li>
@@ -79,7 +83,7 @@
             </button>
             <button
               class="scrollLink active:bg-opacity-20 active:bg-customGreen border-2 min-w-[260px] border-customGreen rounded-full px-6 pt-3 pb-[14px] text-customGreen"
-              href="#Gallery"
+              href="#GaleriaScroll"
             >
               <span
                 class="after:content-arrowDown after:align-middle after:ml-2 text-[16px] font-inter"
@@ -279,39 +283,42 @@
             Nasze <span class="font-inter italic">projekty</span>
           </h1>
         </div>
-        <div class="relative gridMsnr backdrop-blur-3xl">
-          <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h3">
-            <img src="./src/assets//gallery/GalleryPhoto1.png" alt="Photo1" />
-          </div>
-          <div class="gridMsnr-item gridMsnr-w2 gridMsnr-h1">
-            <img src="./src/assets//gallery/GalleryPhoto2.png" alt="Photo2" />
-          </div>
-          <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h2">
-            <img src="./src/assets//gallery/GalleryPhoto3.png" alt="Photo3" />
-          </div>
-          <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h2">
-            <img src="./src/assets//gallery/GalleryPhoto4.png" alt="Photo4" />
-          </div>
-          <div class="gridMsnr-item gridMsnr-w2 gridMsnr-h2">
-            <img src="./src/assets//gallery/GalleryPhoto5.png" alt="Photo5" />
-          </div>
-          <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h3">
-            <img src="./src/assets//gallery/GalleryPhoto6.png" alt="Photo6" />
-          </div>
-          <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h1">
-            <img src="./src/assets//gallery/GalleryPhoto7.png" alt="Photo7" />
-          </div>
-          <div class="gridMsnr-item gridMsnr-w2 gridMsnr-h3">
-            <img src="./src/assets//gallery/GalleryPhoto8.png" alt="Photo8" />
-          </div>
-          <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h2">
-            <img src="./src/assets//gallery/GalleryPhoto9.png" alt="Photo9" />
+        <div class="relative gridMsnr">
+          <div id="Msnr">
+            <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h3">
+              <img src="./src/assets//gallery/GalleryPhoto1.png" alt="Photo1" />
+            </div>
+            <div class="gridMsnr-item gridMsnr-w2 gridMsnr-h1">
+              <img src="./src/assets//gallery/GalleryPhoto2.png" alt="Photo2" />
+            </div>
+            <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h2">
+              <img src="./src/assets//gallery/GalleryPhoto3.png" alt="Photo3" />
+            </div>
+            <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h2">
+              <img src="./src/assets//gallery/GalleryPhoto4.png" alt="Photo4" />
+            </div>
+            <div class="gridMsnr-item gridMsnr-w2 gridMsnr-h2">
+              <img src="./src/assets//gallery/GalleryPhoto5.png" alt="Photo5" />
+            </div>
+            <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h3">
+              <img src="./src/assets//gallery/GalleryPhoto6.png" alt="Photo6" />
+            </div>
+            <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h1">
+              <img src="./src/assets//gallery/GalleryPhoto7.png" alt="Photo7" />
+            </div>
+            <div class="gridMsnr-item gridMsnr-w2 gridMsnr-h3">
+              <img src="./src/assets//gallery/GalleryPhoto8.png" alt="Photo8" />
+            </div>
+            <div class="gridMsnr-item gridMsnr-w1 gridMsnr-h2">
+              <img src="./src/assets//gallery/GalleryPhoto9.png" alt="Photo9" />
+            </div>
           </div>
           <div
-            class="bg-gradient-to-b from-transparent to-customBeige fixed bottom-0 w-full h-screen"
+            class="bg-gradient-to-b from-transparent to-customBeige absolute bottom-0 w-full h-screen"
           ></div>
           <button
-            class="active:bg-customGrey active:bg-opacity-20 absolute left-1/3 bottom-10 border-2 min-w-[260px] border-black rounded-full px-6 pt-3 pb-[14px] text-black"
+            id="MsnrBtn"
+            class="active:bg-customGrey active:bg-opacity-20 absolute bottom-1/4 border-2 min-w-[260px] border-black rounded-full px-6 pt-3 pb-[14px] text-black"
           >
             <span
               class="after:content-arrowDownBlack after:align-middle after:ml-2 font-inter"

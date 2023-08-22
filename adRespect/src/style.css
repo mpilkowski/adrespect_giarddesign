@@ -8,6 +8,9 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+input:focus {
+  outline-width: 0;
+}
 
 /* Masonry gallery styles */
 .gridMsnr {
@@ -106,3 +109,25 @@ body::-webkit-scrollbar {
   opacity: 1;
   transform: translateY(0%);
 }
+
+/* .slider {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.slidesContainer {
+  height: calc(100vh - 2rem);
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.slidesContainer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+} */

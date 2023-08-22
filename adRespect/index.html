@@ -46,19 +46,37 @@
               <a class="scrollLink" href="#Contact">Kontakt</a>
             </li>
             <li>
-              <img
-                src="src/assets/SearchIco.svg"
-                class="w-5 h-5"
-                alt="search"
-                class="w-6 h-6"
-              />
+              <div class="dropDown">
+                <button class="searchBtn dropDownBtn">
+                  <img
+                    src="src/assets/SearchIco.svg"
+                    class="w-5 h-5"
+                    alt="search"
+                    class="w-6 h-6"
+                  />
+                </button>
+
+                <form
+                  class="searchContent dropDownContent flex flex-row justify justify-between px-5 py-5"
+                >
+                  <input
+                    type="text"
+                    class="min-w-[300px]"
+                    placeholder="Znajdz swój wymarzony Ogród!"
+                  />
+                  <button type="submit" id="searchSubmit">Szukaj</button>
+                </form>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section id="Hero" class="flex flex-col-reverse md:flex-row bg-customBeige">
+    <section
+      id="Hero"
+      class="flex flex-col-reverse md:flex-row bg-customBeige justify-between"
+    >
       <div id="wrapper" class="px-8 py-8 lg:px-[89px] lg:py-[144.5px]">
         <div class="flex flex-col gap-[72px]">
           <div class="flex flex-col gap-11">
@@ -93,14 +111,52 @@
           </div>
         </div>
       </div>
-      <div id="heroImg" class="relative">
-        <img
+      <div id="heroImg" class=".slider relative">
+        <ul class="slidesContainer" id="slides-container">
+          <li class="slide">
+            <img
+              class="w-full max-h-[400px] md:h-full md:max-h-full object-cover object-center"
+              src="src/assets/heroImg.png"
+              alt=""
+            />
+          </li>
+          <li class="slide">
+            <img
+              class="w-full max-h-[400px] md:h-full md:max-h-full object-cover object-center"
+              src="src/assets/aboutPhoto.png"
+              alt=""
+            />
+          </li>
+          <li class="slide">
+            <img
+              class="w-full max-h-[400px] md:h-full md:max-h-full object-cover object-center"
+              src="src/assets/heroImg.png"
+              alt=""
+            />
+          </li>
+          <li class="slide">
+            <img
+              class="w-full max-h-[400px] md:h-full md:max-h-full object-cover object-center"
+              src="src/assets/aboutPhoto.png"
+              alt=""
+            />
+          </li>
+        </ul>
+        <!-- <img
           class="w-full max-h-[400px] md:h-full md:max-h-full object-cover object-center"
           src="src/assets/heroImg.png"
           alt=""
-        />
+        /> -->
         <div class="absolute bottom-0 right-0">
-          <button>back</button><button>next</button>
+          <button
+            class="backBtn active:bg-opacity-50 active:bg-black md:bg-customGrey bg-customBeige px-2 py-3 xl:px-6 xl:py-8"
+          >
+            <img src="./src/assets/arrowBlack.svg" alt="" /></button
+          ><button
+            class="nextBtn active:bg-opacity-50 active:bg-black md:bg-customGrey bg-customBeige px-2 py-3 xl:px-6 xl:py-8"
+          >
+            <img class="rotate-180" src="./src/assets/arrowBlack.svg" alt="" />
+          </button>
         </div>
       </div>
     </section>
@@ -276,8 +332,8 @@
     </section>
 
     <section id="Galeria" class="bg-customBeige text-black pt-[120px]">
-      <div class="flex flex-col items-start gap-24">
-        <div id="GaleriaScroll" class="px-[160px]">
+      <div class="flex flex-col items-center gap-24">
+        <div id="GaleriaScroll" class="w-full px-9 xl:px-[160px]">
           <h6 class="text-customGreen text-xs font-inter">Realizacje</h6>
           <h1 class="font-montserrat font-medium text-5xl">
             Nasze <span class="font-inter italic">projekty</span>
@@ -314,15 +370,25 @@
             </div>
           </div>
           <div
+            id="MsnrGradient"
             class="bg-gradient-to-b from-transparent to-customBeige absolute bottom-0 w-full h-screen"
           ></div>
           <button
-            id="MsnrBtn"
+            id="MsnrBtnOpen"
             class="active:bg-customGrey active:bg-opacity-20 absolute bottom-1/4 border-2 min-w-[260px] border-black rounded-full px-6 pt-3 pb-[14px] text-black"
           >
             <span
               class="after:content-arrowDownBlack after:align-middle after:ml-2 font-inter"
               >Poznaj nas bliżej</span
+            >
+          </button>
+          <button
+            id="MsnrBtnClose"
+            class="active:bg-customGrey active:bg-opacity-20 absolute bottom-1/4 border-2 min-w-[260px] border-black rounded-full px-6 pt-3 pb-[14px] text-black hidden"
+          >
+            <span
+              class="after:content-arrowDownBlack after:align-middle after:ml-2 font-inter"
+              >Zwiń Galerię</span
             >
           </button>
         </div>

@@ -30,41 +30,6 @@ let galleryReel = new Masonry(gallery, {
   fitWidth: true,
 });
 
-let msnrGallery = document.getElementById("Msnr");
-let msnrBtnOpen = document.getElementById("MsnrBtnOpen");
-let msnrBtnClose = document.getElementById("MsnrBtnClose");
-let msnrGradient = document.getElementById("MsnrGradient");
-
-msnrBtnOpen.addEventListener("click", () => {
-  for (let photoIndex = 1; photoIndex < 10; photoIndex++) {
-    let newBrick = document.createElement("div");
-    newBrick.classList += "gridMsnr-item gridMsnr-w1 gridMsnr-h3";
-    newBrick.innerHTML = `<img src="./src/assets//gallery/GalleryPhoto${photoIndex}.png" alt="Photo${photoIndex}" />`;
-    msnrGallery.appendChild(newBrick);
-    galleryReel.appended(newBrick);
-  }
-  msnrBtnOpen;
-  popupGallery();
-
-  msnrBtnOpen.style.display = "none";
-  msnrBtnClose.style.display = "block";
-  msnrGradient.style.display = "none";
-
-  galleryReel.reloadItems();
-});
-msnrBtnClose.addEventListener("click", () => {
-  for (let photoIndex = 1; photoIndex < 10; photoIndex++) {
-    msnrGallery.removeChild(msnrGallery.lastChild);
-    galleryReel.remove(msnrGallery.lastChild);
-  }
-
-  msnrBtnOpen.style.display = "block";
-  msnrBtnClose.style.display = "none";
-  msnrGradient.style.display = "block";
-
-  galleryReel.reloadItems();
-});
-
 //3. popup for Gallery
 function popupGallery() {
   document.querySelectorAll(".gridMsnr .gridMsnr-item img").forEach((img) => {
